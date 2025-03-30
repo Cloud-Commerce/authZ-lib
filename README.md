@@ -1,1 +1,1 @@
-# authZ-server
+# authZ-lib
