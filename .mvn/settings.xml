@@ -1,0 +1,47 @@
+<!-- ~/.m2/settings.xml -->
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
+    
+    <!-- SERVERS (GitHub Packages Auth) -->
+    <servers>
+        <!-- For GitHub Packages -->
+        <server>
+            <id>github</id>
+            <username>Cloud-Commerce</username>
+            <!-- Create token at: https://github.com/settings/tokens -->
+            <!-- Required scopes: read:packages, write:packages, delete:packages -->
+            <password>personal-access-token</password>
+        </server>
+    </servers>
+
+    <!-- PROFILE (Optional but recommended) -->
+    <profiles>
+        <profile>
+            <id>github</id>
+            <repositories>
+                <repository>
+                    <id>github</id>
+                    <url>https://maven.pkg.github.com/Cloud-Commerce/*</url>
+                    <releases><enabled>true</enabled></releases>
+                    <snapshots><enabled>true</enabled></snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+
+    <!-- ACTIVE PROFILE -->
+    <activeProfiles>
+        <activeProfile>github</activeProfile>
+    </activeProfiles>
+
+    <!-- MIRRORS (Optional) -->
+    <mirrors>
+        <mirror>
+            <id>github-maven</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/Cloud-Commerce</url>
+            <mirrorOf>github</mirrorOf>
+        </mirror>
+    </mirrors>
+</settings>
