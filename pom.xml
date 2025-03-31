@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>edu.ecom</groupId>
 	<artifactId>authz-lib</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>authZ-lib</name>
 	<description>A Common library for Authorization of E-Commerce Platform</description>
 	<url/>
