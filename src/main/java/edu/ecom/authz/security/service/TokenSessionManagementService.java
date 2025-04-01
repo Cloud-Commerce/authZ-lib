@@ -16,13 +16,13 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TokenManagementService {
+public class TokenSessionManagementService {
 
   private final RedisTemplate<String, TokenDetails> redisTemplate;
   private final JwtServiceProvider jwtServiceProvider;
 
   @Autowired
-  public TokenManagementService(RedisTemplate<String, TokenDetails> redisTemplate,
+  public TokenSessionManagementService(RedisTemplate<String, TokenDetails> redisTemplate,
       JwtServiceProvider jwtServiceProvider) {
     this.redisTemplate = redisTemplate;
     this.jwtServiceProvider = jwtServiceProvider;

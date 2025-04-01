@@ -4,6 +4,7 @@ import eu.bitwalker.useragentutils.*;
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
+import lombok.Getter;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -15,6 +16,7 @@ public class RequestMetadata {
 
   @Value("${app.client-salt}") String clientSalt;
 
+  @Getter
   private final HttpServletRequest request;
 
   public RequestMetadata(HttpServletRequest request) {
