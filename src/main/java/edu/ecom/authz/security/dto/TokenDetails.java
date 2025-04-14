@@ -1,6 +1,6 @@
 package edu.ecom.authz.security.dto;
 
-import io.jsonwebtoken.Claims;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Map;
 import lombok.AllArgsConstructor;
@@ -22,6 +22,7 @@ public class TokenDetails {
   String remarks;
   boolean genuine;
   boolean expired;
-  Claims claims;
+  Map<String, Object> claims;
   Map<String, String> clientMetadata;
+  Collection<String> roles;
 }

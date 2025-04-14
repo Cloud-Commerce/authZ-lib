@@ -1,6 +1,6 @@
 package edu.ecom.authz.security.dto;
 
-import io.jsonwebtoken.Claims;
+import java.util.Map;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
@@ -9,5 +9,5 @@ import org.springframework.security.web.authentication.WebAuthenticationDetails;
 @Builder
 public class AuthDetails {
   WebAuthenticationDetails webAuthenticationDetails;
-  Claims claims;
+  Map<String, Object> claims;
 }
