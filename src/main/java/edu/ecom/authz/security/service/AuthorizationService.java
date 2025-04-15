@@ -5,6 +5,6 @@ import org.springframework.lang.NonNull;
 import reactor.core.publisher.Mono;
 
 public interface AuthorizationService {
-    Mono<TokenDetails> getAuthorizedClaims(@NonNull String token, @NonNull String requiredRole);
-    Mono<TokenDetails> hasPermission(@NonNull String token, @NonNull String requiredPermission);
+    Mono<Boolean> hasRole(@NonNull Mono<TokenDetails> tokenDetailsMono, @NonNull String requiredRole);
+    Mono<Boolean> hasPermission(@NonNull Mono<TokenDetails> tokenDetailsMono, @NonNull String requiredPermission);
 }

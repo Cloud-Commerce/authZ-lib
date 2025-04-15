@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>edu.ecom</groupId>
 	<artifactId>authz-lib</artifactId>
-	<version>0.0.3</version>
+	<version>main-SNAPSHOT</version>
 	<name>${project.artifactId}</name>
 	<description>A Common library for Authorization of E-Commerce Platform</description>
 	<url/>
@@ -49,25 +49,20 @@
 		<spring-cloud.version>2024.0.1</spring-cloud.version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-security</artifactId>-->
+<!--		</dependency>-->
 
 		<!-- Reactive Web for custom filters -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.cloud</groupId>-->
+<!--			<artifactId>spring-cloud-starter-loadbalancer</artifactId>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
